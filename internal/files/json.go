@@ -8,8 +8,8 @@ import (
 	"io"
 	"os"
 
-	"example.org/pos/application"
-	"example.org/pos/domain"
+	"example.org/pos/internal/application"
+	"example.org/pos/internal/domain"
 )
 
 // Store хранит путь и исходную версию файла для одного сеанса.

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"example.org/pos/domain"
+	"example.org/pos/internal/domain"
 )
 
 var (

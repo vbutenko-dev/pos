@@ -7,10 +7,10 @@ import (
 	"reflect"
 	"testing"
 
-	"example.org/pos/adapters/files"
-	"example.org/pos/adapters/memory"
-	"example.org/pos/application"
-	"example.org/pos/domain"
+	"example.org/pos/internal/application"
+	"example.org/pos/internal/domain"
+	"example.org/pos/internal/files"
+	"example.org/pos/internal/memory"
 )
 
 func TestRoundTripAndExport(t *testing.T) {
@@ -45,7 +45,7 @@ func TestRoundTripAndExport(t *testing.T) {
 	must(files.ExportCSV(report, restored))
 	f, err := os.Open(report)
 	must(err)
-	defer f.Close()
+	defer func() { must(f.Close()) }()
 	rows, err := csv.NewReader(f).ReadAll()
 	must(err)
 	want := [][]string{

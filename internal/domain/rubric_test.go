@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"example.org/pos/domain"
+	"example.org/pos/internal/domain"
 )
 
 func TestEvaluation(t *testing.T) {

@@ -1,0 +1,27 @@
+{
+  "repository": "https://github.com/tvkaruba/hw1-test",
+  "branch": "dev",
+  "downloaded_on": "2026-11-23",
+  "files": {
+    "go-modern.skill": {
+      "path": "skills/go-modern.skill",
+      "git_blob_sha1": "0d11390d1997d14f05070120e62e60c7ad7780f1",
+      "sha256": "7712e3e4bd52cc996344be8adf9ab0a803747545a1a169f8eb4b15cf2ae1884e"
+    },
+    "asd-ste100.skill": {
+      "path": "skills/asd-ste100.skill",
+      "git_blob_sha1": "565e873c3b9d39b3c1121d7705b71673269783a7",
+      "sha256": "d0350b53ec505fb870a9c0583052d5cc5eb05396383ddb3d4cf902603e9c4d93"
+    },
+    "asd-ste100-ru.skill": {
+      "path": "skills/asd-ste100-ru.skill",
+      "git_blob_sha1": "465433afc77e4367e6355df03d7eed5b7fa9988a",
+      "sha256": "0d099ba0f911182f5678e81317cbf213d3b9fb01d658b5631f749a13e4a39b1b"
+    },
+    "c4-diagrams.skill": {
+      "path": "skills/c4-diagrams.skill",
+      "git_blob_sha1": "9a2e8a922dba1ffbe4eee6c1f64187a7499290a0",
+      "sha256": "44ca335555f39e3dd266133a8ac8f4a86bc295de24baca461c31778a972c7655"
+    }
+  }
+}

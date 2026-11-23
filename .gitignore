@@ -1,0 +1,7 @@
+.DS_Store
+/pos
+/coverage.out
+/gradebook.json
+/gradebook.json.tmp
+/totals.csv
+/totals.csv.tmp

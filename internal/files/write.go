@@ -2,6 +2,7 @@
 package files
 
 import (
+	"errors"
 	"fmt"
 	"io"
 	"os"
@@ -17,12 +18,11 @@ func replaceFile(path string, write func(io.Writer) error) (err error) {
 	}
 	defer func() {
 		if err != nil {
-			os.Remove(tmp)
+			err = errors.Join(err, os.Remove(tmp))
 		}
 	}()
 	if err := write(f); err != nil {
-		f.Close()
-		return err
+		return errors.Join(err, f.Close())
 	}
 	if err := f.Close(); err != nil {
 		return err

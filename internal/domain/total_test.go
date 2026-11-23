@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	"example.org/pos/domain"
+	"example.org/pos/internal/domain"
 )
 
 func TestWeightedTotals(t *testing.T) {

@@ -6,11 +6,11 @@ import (
 
 	"go.uber.org/dig"
 
-	"example.org/pos/adapters/console"
-	"example.org/pos/adapters/files"
-	"example.org/pos/adapters/memory"
-	"example.org/pos/application"
-	"example.org/pos/domain"
+	"example.org/pos/internal/application"
+	"example.org/pos/internal/console"
+	"example.org/pos/internal/domain"
+	"example.org/pos/internal/files"
+	"example.org/pos/internal/memory"
 )
 
 func main() {

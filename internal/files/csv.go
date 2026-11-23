@@ -5,7 +5,7 @@ import (
 	"io"
 	"strconv"
 
-	"example.org/pos/application"
+	"example.org/pos/internal/application"
 )
 
 // ExportCSV выгружает по одной строке на студента. Пустое поле означает отсутствие итога.

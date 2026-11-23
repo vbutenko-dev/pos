@@ -2,13 +2,15 @@ package console_test
 
 import (
 	"bytes"
+	"errors"
+	"io"
 	"strings"
 	"testing"
 
-	"example.org/pos/adapters/console"
-	"example.org/pos/adapters/memory"
-	"example.org/pos/application"
-	"example.org/pos/domain"
+	"example.org/pos/internal/application"
+	"example.org/pos/internal/console"
+	"example.org/pos/internal/domain"
+	"example.org/pos/internal/memory"
 )
 
 func TestRejectedScorePreservesGrade(t *testing.T) {
@@ -71,5 +73,18 @@ func TestGradebookMenu(t *testing.T) {
 			t.Fatalf("в этом месте вывода ожидали %q", want)
 		}
 		remaining = rest
+	}
+}
+
+func TestRunReturnsOutputError(t *testing.T) {
+	t.Parallel()
+	reader, writer := io.Pipe()
+	if err := reader.Close(); err != nil {
+		t.Fatal(err)
+	}
+	book := application.NewGradebook(memory.New(), new(domain.Rubric))
+	err := console.Run(book, strings.NewReader("0\n"), writer)
+	if !errors.Is(err, io.ErrClosedPipe) {
+		t.Fatalf("Run вернул %v, ожидали %v", err, io.ErrClosedPipe)
 	}
 }

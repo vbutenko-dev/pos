@@ -5,8 +5,8 @@ import (
 	"maps"
 	"slices"
 
-	"example.org/pos/application"
-	"example.org/pos/domain"
+	"example.org/pos/internal/application"
+	"example.org/pos/internal/domain"
 )
 
 // Repository хранит студентов по ID, а их оценки — по названию критерия.
